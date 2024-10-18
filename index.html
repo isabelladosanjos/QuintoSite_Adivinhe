@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adivinhação de Imagens</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.bundle.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link rel="icon" href="imagens/logo.png" width="100" height="100">
+
+	<style>
+		h1 {
+			color: black;
+			font-family: serif;
+			font-size: 25px;
+		}
+	</style>
+</head>
+
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			<img src="imagens/logo.jpeg" height="60px" width="60px" height="100" loading="lazy">&nbsp; &nbsp;
+			<a class="navbar-brand">JOGO DA ADIVINHAÇÃO</a>&nbsp; &nbsp;
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Adivinhação de Imagem</a>
+					</li>&nbsp; &nbsp;
+					<li class="nav-item">
+						<a class="nav-link" href="jogo2.html">Adivinhação de Número</a>
+					</li>&nbsp; &nbsp;
+					<li class="nav-item">
+						<a href="dupla.html" class="nav-link">Dupla</a>
+					</li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-dark" type="submit">Confirm</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div class="alert alert-dark" role="alert">
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			<h4 class="alert-heading">Instruções do joguinho:</h4>
+
+			<hr>
+			<p class="mb-0">Escolha um dos jogadores do Irã e memorize-o.</p>
+			<p class="mb-0">Não conte e nem fale o jogador que você escolheu!</p>
+			<p class="mb-0">Só errarei se você não identificar corretamente as imagens do jogador que você
+				pensou.</p>
+			<p class="mb-0">Divirta-se!</p>
+
+		</div>
+
+	</div>
+	</br>
+
+
+	<script language="Javascript">
+
+		document.write('<center> <h2> Jogo da Adivinhação </h2> <br>');
+		document.write('<center> <h2> Veja a carta a seguir, memorize um jogador e espere que vou adivinhar. </h2> <br>');
+		document.write('<form name="formAdivinha" method="get"> ');
+
+
+
+		document.write('<center> <img src="cartas/principal.jpeg" border="5" width="800" height="500" title="Role a tela para baixo"> </img> </center>');
+		document.write('<marquee behavior="alternate"> <br> <h2> Escolha abaixo as cartas em que sua imagem aparece.</h2> <br> </marquee>');
+
+		document.write('<center> <img src="cartas/carta1.jpeg" border="5" width="900" height="500" </img> </center>');
+		document.write('<br> <INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim ');
+		document.write('<INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<P><br>');
+
+		document.write('<center> <img src="cartas/carta2.jpeg" border="5" width="900" height="500"> </img> </center>');
+		document.write('<br> <INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim ');
+		document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<P> <br>');
+
+		document.write('<center> <img src="cartas/carta3.jpeg" border="5" width="900" height="500"> </img> </center>');
+		document.write('<br> <INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim ');
+		document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<P> <br>');
+
+		document.write('<center> <img src="cartas/carta4.jpeg" border="5" width="900" height="500"> </img> </center>');
+		document.write('<br> <INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim ');
+		document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<P> <br>');
+
+		document.write('<input type="button" class="btn btn-outline-dark" name="verifica" value="Ver o Resultado" onclick="respostas()">    ');
+		document.write('<input type="reset" class="btn btn-outline-dark" name="limpar" value="Limpar Respostas" >');
+		document.write('</form> </center>');
+
+
+
+
+		function respostas() {
+
+			var posicao = 0;
+
+			var resp1 = document.formAdivinha.op1.value;
+			var resp2 = document.formAdivinha.op2.value;
+			var resp3 = document.formAdivinha.op3.value;
+			var resp4 = document.formAdivinha.op4.value;
+
+
+
+			//alert('resposta 1 '+resp1); alert('resposta 2 '+resp2); alert('resposta 3 '+resp3); alert('resposta 4 '+resp4);
+
+
+
+
+			if (resp1 == "Sim") posicao = posicao + 1;
+			if (resp2 == "Sim") posicao = posicao + 2;
+			if (resp3 == "Sim") posicao = posicao + 8;
+			if (resp4 == "Sim") posicao = posicao + 4;
+
+
+			if (posicao > 0) {
+				//alert('posicao ='+posicao);
+				document.write('<center><br><h5>O jogador que você pensou foi: </h5>');
+
+				if (posicao == 1) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/mehditaremi.jpg" alt="Foto do Mehdi" style="width:100%"><div class="card-body"><h4 class="card-title">Mehdi Taremi, 30 anos</h4><h4 class="card-text">Atacante</h4></br><h3 Clube atual: Futebol Clube do Porto</h3><h2> Clubes em que já atuou:</br>• Shahin Bushehr</br>• Persepolis</br>• Al-Gharafa SC</br></br>Principais títulos:</br>• Supertaça Cândido de Oliveira: 2020, 2022</br>• Campeonato Português: 2021–22</br>• Taça de Portugal: 2021–22 </h2> </br><a href="https://www.instagram.com/mehditaremiofficial9/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 2) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/sardar.jpg" alt="Foto do Sardar" style="width:100%"><div class="card-body"><h4 class="card-title">Sardar Azmoun, 27 anos</h4><h4 class="card-text">Centroavante</h4></br><h3 Clube atual: Futebol Clube do Porto</h3><h2> Clubes em que já atuou:</br>• Rubin Kazan</br>• Zenit</br>• Leverkusen</br></br>Principais títulos:</br>• Campeonato Russo: 2018–19, 2019–20, 2020–21, 2021–22</br>• Copa da Rússia: 2019–20</br>• Supercopa da Rússia: 2020, 2021–22</h2> </br><a href="https://www.instagram.com/sardar_azmoun/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 3) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/alirezab.jpg" alt="Foto do Alireza Beiranvand" style="width:100%"><div class="card-body"><h4 class="card-title">Alireza B, 30 anos</h4><h4 class="card-text">Goleiro</h4></br><h3 Clube atual: Persepolis</h3><h2> Clubes em que já atuou:</br>• Rubin Kazan</br>• Boavista</br>• Naft Tehran</br></br>Principais títulos:</br>• Liga Iraniana</br>• Taça Iraniana</h2> </br><a href="https://www.instagram.com/alirezabeyranvand.official/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+
+				if (posicao == 4) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/ehsan.jpg" alt="Foto do Ehsan Hajsafi" style="width:100%"><div class="card-body"><h4 class="card-title">Ehsan Hajsafi, 32 anos</h4><h4 class="card-text">Lateral-esquerdo</h4></br><h3 Clube atual: AEK Atenas</h3><h2> Clubes em que já atuou:</br>• Sepahan</br>• FSV Frankfurt</br>• Zob Ahan</br></br>Principais títulos:</br>• Iran Pro League: 2009–10, 2010–11, 2014–15</br>• Copa do Irã: 2005–06, 2006–07, 2012–1.</br>• Copa do Irã: 2019–20</h2> </br><a href="https://www.instagram.com/ehsanhajsafi28/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 5) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/ramin.jpg" alt="Foto do Ramin Rezaeian" style="width:100%"><div class="card-body"><h4 class="card-title">Ramin Rezaeian, 32 anos</h4><h4 class="card-text">Lateral-direito</h4></br><h3 Clube atual: Sepahan</h3><h2> Clubes em que já atuou:</br>• Al Shahania</br>• KV Oostende</br>Persépolis</br></br>Principais títulos:</br>• Qatari Stars Cup 2x – 20/21, 21/22</br>• Copa do Irã - 2016/17</h2> </br><a href="https://www.instagram.com/raminrezaeian/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 6) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/alirezaj.jpeg" alt="Foto do Alireza Jahanbakhsh" style="width:100%"><div class="card-body"><h4 class="card-title">Alireza JB, 29 anos</h4><h4 class="card-text">Meia-atacante</h4></br><h3 Clube atual: Brighton & Hove Albion</h3><h2> Clubes em que já atuou:</br>• Damash Tehran</br>• NEC</br>• Damash Gilan</br></br>Principais títulos:</br>• Eredivisie Talento da Temporada: 2013–14 (Vice)</br>• Eerste Divisie Futebolista do primeiro turno: 2014–15</br>• Eerste Divisie Melhor jogador da temporada (Gouden Stier): 2014-15</h2></br><a href="https://www.instagram.com/alirezajb_official/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 7) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/amir.jpg" alt="Foto do Amir Abedzadeh" style="width:100%"><div class="card-body"><h4 class="card-title">Amir Abedzadeh, 29 anos</h4><h4 class="card-text">Goleiro</h4></br><h3 Clube atual: Ponferradina</h3><h2> Clubes em que já atuou:</br>• Los Angeles Blues</br>• Los Angeles Blues</br>• Barreirense</br></br>Principais títulos:</br>• Participante da Copa Ásia (2019)</br>• Participante da Copa do Mundo (2018)</h2></br><a href="https://www.instagram.com/abedz/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 8) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/saeid.jpeg" alt="Foto do Saeid Ezatolahi" style="width:100%"><div class="card-body"><h4 class="card-title">Saeid Ezatolahi, 26 anos</h4><h4 class="card-text">Volante</h4></br><h3Clube atual: Vejle</h3><h2> Clubes em que já atuou:</br>• Amkar Perm</br>• Rostov</br>• Eupen</br></br>Principais títulos:</br>• Persian Gulf Pro League: Melhor Jogador Jovem (2013)</h2></br><a href="https://www.instagram.com/saeedezatolahi/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 9) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/ali.jpg" alt="Foto do Ali Karimi" style="width:100%"><div class="card-body"><h4 class="card-title">Ali Karimi, 28 anos</h4><h4 class="card-text">Meio-campista</h4></br><h3Clube atual: Kayserispor</h3><h2> Clubes em que já atuou:</br>• Dinamo Zagreb</br>• Sepahan</br>• Esteghlal</br></br>Principais títulos:</br>• WC Qualifiers Ásia</h2></br><a href="https://www.instagram.com/ali14karimi/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 10) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/saman.jpg" alt="Foto do Saman Ghoddos" style="width:100%"><div class="card-body"><h4 class="card-title">Saman Ghoddos, 29 anos</h4><h4 class="card-text">Atacante</h4></br><h3Clube atual: Östersunds FK</h3><h2> Clubes em que já atuou:</br>• Brentford</br>• Syrianska FC</br>• Trelleborgs FF</br></br>Principais títulos:</br>• Taça da Suécia (2014)</br>• Participação da Copa do Mundo (2018)</br>• WC Qualifiers Ásia</h2> </br><a href="https://www.instagram.com/saman.ghoddos/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 11) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/shojae.jpg" alt="Foto do Shojae Khalilzadeh" style="width:100%"><div class="card-body"><h4 class="card-title">Shojae Khalilzadeh, 33 anos</h4><h4 class="card-text">Zagueiro</h4></br><h3Clube atual: Al-Ahli Sports Club</h3><h2> Clubes em que já atuou:</br>• Syrianska FC</br>• Persépolis</br>• Sepahan</br></br>Principais títulos:</br>• Liga Iraniana: 2019/20 - 2017/18 - 2014/15</h2></br><a href="https://www.instagram.com/shoja_khalilzadeh/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 12) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/karim.jpg" alt="Foto do Karim Ansarifard" style="width:100%"><div class="card-body"><h4 class="card-title">Karim Ansarifard, 32 anos</h4><h4 class="card-text">Atacante</h4></br><h3Clube atual: AC Omonia</h3><h2> Clubes em que já atuou:</br>• AEK</br>• Persépolis</br>• Al-Sailiya</br></br>Principais títulos:</br>• Superliga Grega: 2016–17</br>• Iran Pro League de 2011–12 (21 gols)</br>• Iran Pro League de 2013–14 (14 gols)</h2></br><a href="https://www.instagram.com/kariiiiim10/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 13) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/hossein.jpg" alt="Foto do Hossein Hosseini" style="width:100%"><div class="card-body"><h4 class="card-title">Hossein Hosseini, 30 anos</h4><h4 class="card-text">Goleiro</h4></br><h3Clube atual: Esteghlal</h3><h2> Clubes em que já atuou:</br>• Malavan</br>• Esteghlal</br>• Bargh Shiraz</br></br>Principais títulos:</br>• Liga Iraniana - 2021/22</br>• Supertaça Irã - 2022</h2> </br><a href="https://www.instagram.com/hosseini21/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 14) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/vahid.jpg" alt="Foto do Vahid Amiri" style="width:100%"><div class="card-body"><h4 class="card-title">Vahid Amiri, 34 anos</h4><h4 class="card-text">Meio-campista</h4></br><h3Clube atual: Persepolis</h3><h2> Clubes em que já atuou:</br>• Lorestan</br>• Gahar Zagros</br>• Kowsar </br></br>Principais títulos:</br>• Liga Iraniana: 2016/17 - 2017/18</h2></br><a href="https://www.instagram.com/vahid.amiri.official/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+				if (posicao == 15) {
+					document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+					document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+					document.write('<link href = "css/card.css" rel="stylesheet">')
+					document.write('<div class="container"><div class="row gx-7 justify-content-center"><div class="col-lg-5 col-md-15"><div class="card" style="width:500px"><img class="card-img-top" <img src="imagens/ira.jfif" alt="Foto da bandeira do Irã" style="width:100%"><div class="card-body"><h4 class="card-title">Irã (Seleção Iraniana de Futebol)</h4><h4 class="card-text">Treinador: Carlos Queiroz</h4></br><h3Ranking: 21</h3><h2>Principais clubes do país:</br>• Nassaji Mazandaran Football Club</br>• Foolad Football Club</br>• Sepahan Sport Club</br>• Persepolis Football Club</h2> </br><a href="https://www.instagram.com/iran_football_federation/"class="btn btn-primary">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="jogo.html" class="btn btn-primary">Voltar</a></div></div></div>');
+				}
+
+				document.write('</center> </div>');
+
+
+
+			} else alert('Você não escolheu nenhuma carta');
+
+
+		}
+
+
+	</script>
+
+</body>
+
+</html>

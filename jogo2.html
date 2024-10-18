@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adivinhação de Números</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.bundle.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link rel="icon" href="imagens/logo.png" width="100" height="100">
+	
+	<style>
+		h1 {
+			color: black;
+			font-family: serif;
+			font-size: 25px;
+		}
+	</style>
+</head>
+
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			<img src="imagens/logo.jpeg" height="60px" width="60px" height="100" loading="lazy">&nbsp; &nbsp;
+			<a class="navbar-brand">JOGO DA ADIVINHAÇÃO</a>&nbsp; &nbsp;
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Adivinhação de Imagem</a>
+					</li>&nbsp; &nbsp;
+					<li class="nav-item">
+						<a class="nav-link active" href="jogo2.html">Adivinhação de Número</a>
+					</li>&nbsp; &nbsp;
+					<li class="nav-item">
+						<a href="dupla.html" class="nav-link">Dupla</a>
+					</li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-dark" type="submit">Confirm</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div class="alert alert-danger" role="alert">
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			<h4 class="alert-heading">Instruções do joguinho:</h4>
+
+			<hr>
+			<p class="mb-0">Pense em um número de 1 até 31</p>
+			<p class="mb-0">Não conte e nem fale o numero que você escolheu!</p>
+			<p class="mb-0">Só errarei se você não identificar corretamente as cartas em que estão o número que você
+				pensou.</p>
+			<p class="mb-0">Divirta-se!</p>
+
+		</div>
+
+	</div>
+	</br>
+	<center>
+		<h2>Adivinha número</h2>
+		<form name="formAdivinha" method="get">
+			<marquee behavior="alternate">
+				<h2> Escolha abaixo um número</h2>
+			</marquee>
+
+			<div class="table-responsive table-condensed">
+				<div class="w-50 p-3" </div>
+					<div class="text-center" </div>
+						<div class="container mt-3">
+							<table class="table table-danger table-striped table-bordered">
+								<tbody>
+									<tr>
+										<td>1</th>
+										<td>3</th>
+										<td>5</th>
+										<td>7</th>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>11</td>
+										<td>13</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td>17</td>
+										<td>19</td>
+										<td>21</td>
+										<td>23</td>
+									</tr>
+									<tr>
+										<td>25</td>
+										<td>27</td>
+										<td>29</td>
+										<td>31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+
+
+						<INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim
+						<INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<br /><br />
+
+						<div class="container mt-3">
+							<table class="table table-danger table-striped table-bordered">
+								<tbody>
+									<tr>
+										<td>2</th>
+										<td>3</th>
+										<td>6</th>
+										<td>7</th>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>11</td>
+										<td>14</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td>18</td>
+										<td>19</td>
+										<td>22</td>
+										<td>23</td>
+									</tr>
+									<tr>
+										<td>26</td>
+										<td>27</td>
+										<td>30</td>
+										<td>31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim
+						<INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<br /><br />
+
+						<div class="container mt-3">
+							<table class="table table-danger table-striped table-bordered">
+								<tbody>
+									<tr>
+										<td>4</th>
+										<td>5</th>
+										<td>6</th>
+										<td>7</th>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>13</td>
+										<td>14</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td>20</td>
+										<td>21</td>
+										<td>22</td>
+										<td>23</td>
+									</tr>
+									<tr>
+										<td>28</td>
+										<td>29</td>
+										<td>30</td>
+										<td>31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim
+						<INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<br /><br />
+
+						<div class="container mt-3">
+							<table class="table table-danger table-striped table-bordered">
+								<tbody>
+									<tr>
+										<td>8</th>
+										<td>9</th>
+										<td>10</th>
+										<td>11</th>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>13</td>
+										<td>14</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td>24</td>
+										<td>25</td>
+										<td>26</td>
+										<td>27</td>
+									</tr>
+									<tr>
+										<td>28</td>
+										<td>29</td>
+										<td>30</td>
+										<td>31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim
+						<INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<br /><br />
+
+						<div class="container mt-3">
+							<table class="table table-danger table-striped table-bordered">
+								<tbody>
+									<tr>
+										<td>16</th>
+										<td>17</th>
+										<td>18</th>
+										<td>19</th>
+									</tr>
+									<tr>
+										<td>20</td>
+										<td>21</td>
+										<td>22</td>
+										<td>23</td>
+									</tr>
+									<tr>
+										<td>24</td>
+										<td>25</td>
+										<td>26</td>
+										<td>27</td>
+									</tr>
+									<tr>
+										<td>28</td>
+										<td>29</td>
+										<td>30</td>
+										<td>31</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<INPUT TYPE="radio" NAME="op5" VALUE="Sim">Sim
+					<INPUT TYPE="radio" NAME="op5" VALUE="Não" checked>Não<br /><br />
+						
+				<script>
+					document.write('<input type="button" class="btn btn-outline-danger" name="verifica" value="Ver o Resultado" onclick="respostas()"> ');
+					document.write('<input type="reset" class="btn btn-outline-danger" name="limpar" value="Limpar Respostas" >');
+				</script>
+		</form>
+	</center>
+
+
+
+
+	<script>
+		function respostas() {
+
+			var acertos = 0;
+
+			var resp1 = document.formAdivinha.op1.value;
+			var resp2 = document.formAdivinha.op2.value;
+			var resp3 = document.formAdivinha.op3.value;
+			var resp4 = document.formAdivinha.op4.value;
+			var resp5 = document.formAdivinha.op5.value;
+
+
+
+			//alert('resposta 1 '+resp1); alert('resposta 2 '+resp2); alert('resposta 3 '+resp3); alert('resposta 4 '+resp4);alert('resposta 5 '+resp5);
+
+
+
+
+			if (resp1 == "Sim") acertos = acertos + 1;
+			if (resp2 == "Sim") acertos = acertos + 2;
+			if (resp3 == "Sim") acertos = acertos + 4;
+			if (resp4 == "Sim") acertos = acertos + 8;
+			if (resp5 == "Sim") acertos = acertos + 16;
+
+
+			if (acertos > 0) {
+				// alert('Acertos ='+acertos);
+				document.write('<link href = "css/bootstrap.min.css" rel = "stylesheet">')
+				document.write('<link href = "css/bootstrap.css" rel="stylesheet">')
+				document.write('<link href = "css/card.css" rel="stylesheet">')
+				document.write('<br><center><h5>O número que você pensou foi: ' + acertos + '</h5>');
+				document.write('<div class="card" style="width: 30rem;"><img src="imagens/ok.gif" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Será que acertei?</h5><p class="card-text">O número que você pensou foi: ' + acertos + ' <br><br> <a href="" button type="button" class="btn btn-outline-danger">Voltar</button></div></div>')
+		
+
+
+
+			} else alert('Você não escolheu nenhuma carta :(');
+
+
+
+
+
+
+
+
+		}
+	</script>
+
+</body>
+
+</html>
